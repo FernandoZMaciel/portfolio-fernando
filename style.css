@@ -175,7 +175,7 @@ span{
 }
 
 .btn:hover{
-    transform: scale(10.05);
+    transform: scale(1.1);
     box-shadow: 0 0 50px var(--second-color);
 }
 
@@ -275,4 +275,54 @@ span{
     100% {
         content: "Mestre no lol";
     }
+}
+
+.heading{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.education{
+    padding: 100px 15px;
+    background: var(--main-color);
+}
+
+.education h2 {
+    margin-bottom: 5rem;
+}
+
+.timeline-items{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--second-color);
+    left: calc(50% -1px);
+}
+
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+}
+
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
 }
