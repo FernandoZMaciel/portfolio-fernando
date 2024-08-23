@@ -1,2 +1,2 @@
 # portfolio-fernando
-Front-end of my own repository
+Front-end of my own portfolio
