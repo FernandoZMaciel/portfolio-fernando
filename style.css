@@ -38,6 +38,10 @@ header{
     z-index: 5;
 }
 
+.hidden {
+    display: none;
+  }
+
 .logo{
     font-size: 3rem;
     color: var(--text-color);
@@ -192,26 +196,26 @@ span{
 }
 
 
-.text-animation {
+.text-animation-en {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
 }
 
-.text-animation span {
+.text-animation-en span {
     position: relative;
     display: inline-block; 
     color: var(--second-color);
 }
 
-.text-animation span::before {
+.text-animation-en span::before {
     content: "Desenvolvedor";
     color: var(--second-color);
     animation: words 20s infinite;
 }
 
-.text-animation span::after {
-    content: "";
+.text-animation-en span::after {
+    content: " ";
     background-color: var(--bg-color);
     position: absolute;
     width: 100%;
@@ -219,7 +223,37 @@ span{
     border-left: 3px solid var(--bg-color);
     right: 0;
     top: 0;
-    animation: cursor 0.6s infinite, typing 20s steps(18) infinite;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+.text-animation-pt {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation-pt span {
+    position: relative;
+    display: inline-block; 
+    color: var(--second-color);
+}
+
+.text-animation-pt span::before {
+    content: "Desenvolvedor";
+    color: var(--second-color);
+    animation: words-pt 20s infinite;
+}
+
+.text-animation-pt span::after {
+    content: " ";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: 0;
+    top: 0;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
@@ -255,6 +289,29 @@ span{
 }
 
 @keyframes words {
+    0%,
+    20% {
+        content: "Back-end Developer";
+    }
+    21%,
+    40% {
+        content: "Java Developer";
+    }
+    41%,
+    60% {
+        content: "Spring Developer";
+    }
+    61%,
+    80% {
+        content: "Mathematical";
+    }
+    81%,
+    100% {
+        content: "Master at League";
+    }
+}
+
+@keyframes words-pt {
     0%,
     20% {
         content: "Desenvolvedor Back-end";
@@ -577,6 +634,8 @@ footer ul li a{
     color: var(--text-color);
 }
 
+
+
 @media(max-width:1285px){
     html{
         font-size: 55%;
@@ -670,3 +729,107 @@ footer ul li a{
     }
 
 }
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+    font-weight: 800;
+  }
+
+  .switch :hover{
+    box-shadow: 0 0 25px var(--second-color);  
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color); /*fundo quando pt*/
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(33, 33, 33); /*bolinha */
+    border: 3px var(--second-color);
+    box-shadow: 0 0 5px var(--second-color);   
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:var(--bg-color);/*fundo quando en*/
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--second-color);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+  }
+  
+  /*------ ADDED CSS ---------*/
+  .on
+  {
+    display: none;
+  }
+  
+  .on, .off
+  {
+    color: var(--text-color);/*letra*/
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+  }
+  
+  input:checked+ .slider .on
+  {display: block;}
+  
+  input:checked + .slider .off
+  {display: none;}
+  
+  /*--------- END --------*/
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+    box-shadow: 0 0 5px var(--second-color);
+  }
+
+  .slider.round:hover{
+    box-shadow: 0 0 25px var(--second-color);
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;}
+
+    @media (min-width: 768px) { /* Ajuste a largura mínima conforme necessário */
+        .switch {
+            position: absolute;
+            top: 10px; /* Adjust top position as needed */
+            right: 10px; /* Adjust right position as needed */
+            display: flex;
+            align-items: center;
+        }
+    }
+    
