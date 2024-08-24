@@ -28,9 +28,9 @@
             <h3 class="text-animation">Eu sou <span></span></h3>
             <p>
                 Desde 2019, venho me dedicando ao desenvolvimento em Java, o que me permitiu mergulhar profundamente em diversas tecnologias e ferramentas. 
-                Sou formado em Matemática pela Universidade Federal de Santa Catarina, uma formação que aprimorou significativamente minhas habilidades de raciocínio lógico 
+                Sou formado em Matemática pela Universidade Federal de Santa Catarina, uma formação que aprimorou minhas habilidades de raciocínio lógico 
                 e resolução de problemas.
-                Atualmente, trabalho como desenvolvedor back-end, onde aplico meus conhecimentos em <span>Java</span>, <span>Spring</span>, <span>AWS</span> e <span>SQL</span> para construir soluções robustas e eficientes. 
+                Atualmente, trabalho como desenvolvedor back-end, onde aplico meus conhecimentos em <span>Java</span>, <span>Spring</span>, <span>AWS</span> e <span>SQL</span> para construir soluções eficientes. 
                 Minha formação matemática e minha experiência prática me ajudam a enfrentar desafios complexos com criatividade e precisão. 
                 Estou sempre em busca de novas oportunidades para aprender e crescer na área de tecnologia.
             </p>
@@ -84,7 +84,7 @@
                             como tipos primitivos e estruturas de controle, até tópicos avançados, 
                             incluindo programação com múltiplas threads. O curso também explora o tratamento de exceções, 
                             gerenciamento de dependências com Maven, operações com JDBC para acesso a bancos de dados e a prática de testes unitários 
-                            para garantir a qualidade do código.</p>
+                            com JUnit.</p>
                     </div>
             </div>
 
@@ -150,7 +150,8 @@
             </div>
             <div class="input-group-2">
                 <textarea id="message" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
-                <input type="submit" onclick="sendMail()" value="Enviar" class="btn" id="submit">
+                <input type="button" value="Enviar Mensagem" onclick="sendMail();" class="btn">
+
             </div>  
         </form>
         <script>
@@ -164,7 +165,6 @@
                     phone_number: document.querySelector("#contact_number").value,
                     subject: document.querySelector("#subject").value,
                     message: document.querySelector("#message").value,
-
                 };
 
                 var serviceID = "service_ywr8163";

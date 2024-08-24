@@ -495,6 +495,7 @@ span{
 }
 
 .contact form .input-box input,
+.contact form .input-box button,
 .contact form textarea{
     width: 100%;
     padding: 2.5rem;
