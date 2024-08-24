@@ -7,6 +7,7 @@
     <title>Fernando Zimmermann Maciel</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     
@@ -136,22 +137,46 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Entre em <span>Contato</span></h2>
-        <form action="">
+        <form id="contact-form" action="">
             <div class="input-group">  
                 <div class="input-box">
-                    <input type="text" placeholder="Nome Completo">
-                    <input type="email" placeholder="Email"> 
+                    <input type="text" placeholder="Nome Completo" id="user_name">
+                    <input type="email" placeholder="Email" id="user_email"> 
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Celular">
-                    <input type="text" placeholder="Assunto">
+                    <input type="number" placeholder="Telefone" id="contact_number">
+                    <input type="text" placeholder="Assunto" id="subject">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name ="" id="" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
-                <input type="submit" value="Enviar" class="btn">
+                <textarea id="message" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+                <input type="submit" onclick="sendMail()" value="Enviar" class="btn" id="submit">
             </div>  
         </form>
+        <script>
+            function sendMail(){
+                (function(){
+                    emailjs.init("x9mTFTuqS39pncAmv");
+                })();
+                var params = {
+                    from_name: document.querySelector("#user_name").value,
+                    reply_to: document.querySelector("#user_email").value,
+                    phone_number: document.querySelector("#contact_number").value,
+                    subject: document.querySelector("#subject").value,
+                    message: document.querySelector("#message").value,
+
+                };
+
+                var serviceID = "service_ywr8163";
+                var templateID = "template_npyt9tb";
+                
+                emailjs.send(serviceID, templateID, params)
+                .then( res  => {
+                    alert("Email enviado com sucesso!");
+                })
+                .catch();
+            }
+        </script>
     </section>
 
     <footer class="footer">
@@ -174,6 +199,8 @@
         <p class="copyright"> @ Fernando Zimmermann Maciel | Todos os Direitos Reservados.</p>
     </footer>
     <script src="script.js"></script>
+    
+
 </body>
 
 </html>
