@@ -68,6 +68,8 @@ function toggleVisibility() {
     const h1_contact_number = document.getElementById('h1_contact_number').innerText;
     const h1_subject = document.getElementById('h1_subject').innerText;
     const h1_message = document.getElementById('h1_message').innerText;
+    const h1_message_btn = document.getElementById('h1_message_btn').innerText;
+    
   
     // Define o texto como o placeholder do input
     const inputField1 = document.getElementById('user_name');
@@ -78,6 +80,9 @@ function toggleVisibility() {
     inputField3.placeholder = h1_subject;
     const inputField4 = document.getElementById('message');
     inputField4.placeholder = h1_message;
+    const inputField5 = document.getElementById('message_btn');
+    inputField5.value = h1_message_btn;
+
 
 
 
