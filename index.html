@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fernando Zimmermann Maciel</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -200,7 +200,39 @@
     </footer>
     <script src="script.js"></script>
     
-
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+    
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+    
+    <!-- Adicione CSS adicional para a versão móvel da navbar -->
+    <style>
+        /* Inicialmente oculta o menu em versão móvel */
+        .navbar {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+        }
+    
+        /* Exibe o menu quando a classe 'active' é adicionada */
+        .navbar.active {
+            display: flex;
+        }
+    
+        /* Estiliza os itens do menu em versão móvel */
+        .navbar a {
+            margin: 1rem;
+            text-align: center;
+        }
+    </style>
 </body>
 
 </html>
