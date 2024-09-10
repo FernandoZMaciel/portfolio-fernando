@@ -58,6 +58,7 @@ header{
     text-shadow: 0 0 25px var(--second-color);
 }
 
+
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
@@ -101,6 +102,10 @@ section{
 
 span{
     color:var(--second-color);
+}
+
+.box-framework{
+    margin-top: 10px;
 }
 
 .home-content h3{

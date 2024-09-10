@@ -100,7 +100,7 @@
                 <div class="timeline-dot"></div>
                     <div class="timeline-date">2024</div>
                     <div class="timeline-content">
-                        <h3 data-en="Maratona Java Course- DevDojo Academy" data-pt="Curso Maratona Java - DevDojo Academy"></h3>
+                        <h3 data-en="Maratona Java Course - DevDojo Academy" data-pt="Curso Maratona Java - DevDojo Academy"></h3>
                         <p data-en="In-depth online course in Java, covering everything from basic concepts, 
                         such as primitive types and control structures, to advanced topics including multithreaded programming. 
                         The course also explores exception handling, dependency management with Maven, JDBC operations for database access, 
@@ -123,18 +123,23 @@
             <div class="project-box" id="divProject1">
                 <div class="project-info">
                 <a><i class='bx bx-link'></i></a>
-                <h4 data-en="CLI Task Tracker" data-pt="CLI Task Tracker"> </h4>
-                <p data-en="A task tracker made with java language!" data-pt="Um task tracker feito em java!"></p>
-                <div class="btn-framework"> Java</div>
+                <h4 data-en="MeetUp Spot" data-pt="MeetUp Spot"> </h4>
+                <p data-en="A REST API that determines the best meeting point for people from different cities, optimizing time and distance!" data-pt="Uma API Rest que determina o melhor ponto de encontro para pessoas de cidades diferentes otimizando tempo e distância!"></p>
+                    <div class="box-framework">
+                        <div class="btn-framework"> Java</div>
+                        <div class="btn-framework"> Spring Boot</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-box" id="divProject1">
+            <div class="project-box" id="divProject2">
                 <div class="project-info">
                 <a><i class='bx bx-link'></i></a>
                 <h4 data-en="CLI Task Tracker" data-pt="CLI Task Tracker"> </h4>
                 <p data-en="A task tracker made with java language!" data-pt="Um task tracker feito em java!"></p>
-                <div class="btn-framework"> Java</div>
+                    <div class="box-framework">
+                        <div class="btn-framework"> Java</div>
+                    </div>
                 </div>
             </div>
 
@@ -200,7 +205,7 @@
                 
                 emailjs.send(serviceID, templateID, params)
                 .then( res  => {
-                    alert("Email enviado com sucesso!");
+                    alert("Email send sucesfully!");
                 })
                 .catch();
             }

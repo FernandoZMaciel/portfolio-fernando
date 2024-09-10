@@ -1,4 +1,8 @@
 document.getElementById('divProject1').addEventListener('click', function() {
+    window.open('https://github.com/FernandoZMaciel/meet-up-spot-backend'); 
+});
+
+document.getElementById('divProject2').addEventListener('click', function() {
     window.open('https://github.com/FernandoZMaciel/task-tracker'); 
 });
 
